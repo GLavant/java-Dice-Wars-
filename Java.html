@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Wars</title>
+    
+    <script>
+        function rollTheDice(){
+    const die = Math.floor(Math.random()*6)
+    document.getElementById("roll").innerHTML = die;
+
+}
+function rollTheDice2(){
+    const die2 = Math.floor(Math.random()*6)
+    document.getElementById("roll2").innerHTML = die2;
+        
+    if(rollTheDice === rollTheDice2){
+        alert("Draw!");
+    }
+    else if(rollTheDice > rollTheDice2){
+        alert("Player 2 Wins!")
+    }
+    else{
+        alert("Player 1 Wins!")
+    }
+    
+}
+
+
+    </script>
+
+    <body>
+    
+        <h1>Let's Play</h1>
+        <h1 id = "roll" ></h1>
+        <h1 id = "roll2" ></h1>
+    <div class="container bottom">
+        <button type="button" onclick="rollTheDice()">
+            Roll the Dice
+        </button>
+        
+        <button type="button2" onclick="rollTheDice2()">
+            Roll the Dice 2
+        </button>
+    </div>
+    
+</body>
+  
+</html>
